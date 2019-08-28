@@ -1,0 +1,17 @@
+{
+  "name": "gannett-proj",
+  "version": "1.0.0",
+  "description": "Gannett project",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "gannett"
+  ],
+  "author": "The Architect <thearchitect@nousacademy.com> (https://nousacademy.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
