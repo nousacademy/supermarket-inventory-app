@@ -9,15 +9,15 @@
 module.exports = [
   {
     "name": "Organic Honeycrisp Apples",
-    "code": "OHA8283",
+    "code": "OHAA-2837-3627-37hg",
     "price": "2.00"
   },{
     "name": "Bulletproof Brain Octane MCT Oil",
-    "code": "BBOMO934948",
+    "code": "BBOM-O349-48aP-3im9",
     "price": "14.73"
   },{
     "name": "Yupik Organic Raw Cashews, 2lb Package",
-    "code": "YURC2P387272",
+    "code": "YURC-2P87-272h-Dbg1",
     "price": "22.98"
   }
 ];

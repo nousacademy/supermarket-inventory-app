@@ -3,11 +3,17 @@
   <head>
     <title>Supermarket Inventory Manager</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.10.1/css/pro.min.css">
+    <style>
+    .fa-times-circle {
+      cursor: pointer;
+    }
+    </style>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
     <div id="inventory_app" class="container">
-      <!-- <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Whole_Foods_Market_2018_Logo.png/220px-Whole_Foods_Market_2018_Logo.png" class="img-responsive"> -->
+      <!-- View products in database -->
       <table class="table table-dark">
         <thead>
           <tr>
@@ -21,9 +27,28 @@
             <td>{{ key.name }}</td>
             <td>{{ key.code }}</td>
             <td>$ {{ key.price }}</td>
+            <td><i class="far fa-times-circle"></i></td>
           </tr>
         </tbody>
       </table>
+      <!-- Add Product to database -->
+      <div class="card">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Produce Name</label>
+            <input v-model="produceName" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Produce Code</label>
+            <input v-model="produceCode" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="priceInput">Produce Price</label>
+            <input v-model="producePrice" type="number" class="form-control" placeholder="ex. 9.99">
+          </div>
+          <button v-on:click="addProduceItem(produceName, produceCode, producePrice)" type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="js/client.js"></script>
   </body>
